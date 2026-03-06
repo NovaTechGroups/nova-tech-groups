@@ -13,6 +13,8 @@
         .nav-link { color: #5f6368; font-size: 14px; font-weight: 500; transition: color 0.2s; }
         .nav-link:hover { color: #1a73e8; }
         .section-title { font-size: 36px; font-weight: 400; color: #202124; letter-spacing: -0.5px; }
+        .input-field { border: 1px solid #dadce0; border-radius: 4px; padding: 12px; outline: none; transition: border 0.2s; }
+        .input-field:focus { border-color: #1a73e8; }
     </style>
 </head>
 <body class="antialiased">
@@ -30,7 +32,7 @@
             </div>
         </div>
         <div class="flex items-center space-x-6">
-            <button class="btn-google px-6 py-2 text-sm font-semibold">Contact Sales</button>
+            <a href="#contact" class="btn-google px-6 py-2 text-sm font-semibold">Contact Sales</a>
         </div>
     </nav>
 
@@ -43,7 +45,7 @@
         </p>
         <div class="flex gap-4">
             <a href="#products" class="btn-google px-10 py-3 text-base font-semibold">View our products</a>
-            <button class="border border-gray-300 px-10 py-3 text-base font-semibold text-[#5f6368] rounded-[4px] hover:bg-gray-50 transition">Read our story</button>
+            <a href="#about" class="border border-gray-300 px-10 py-3 text-base font-semibold text-[#5f6368] rounded-[4px] hover:bg-gray-50 transition text-center">Read our story</a>
         </div>
     </section>
 
@@ -61,7 +63,7 @@
 
     <section id="products" class="py-32">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="mb-20">
+            <div class="mb-20 text-center md:text-left">
                 <h2 class="section-title">Our Ecosystem</h2>
                 <p class="text-[#5f6368] mt-4">Exploring our core software deployments.</p>
             </div>
@@ -87,11 +89,56 @@
                     </div>
                     <h3 class="text-2xl font-medium text-[#202124] mb-4">BaseSecurity Client</h3>
                     <p class="text-[#5f6368] leading-relaxed mb-8">
-                        A standalone security protocol developed for Android applications. It features advanced detection for VPNs, Emulators, and unauthorized developer access to maintain ecosystem integrity.
+                        A standalone security protocol developed for Android applications. It features advanced detection for VPNs, Emulators, and unauthorized developer access.
                     </p>
                     <span class="text-gray-400 font-semibold flex items-center italic">Enterprise Only</span>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section id="innovation" class="py-24 bg-[#f8f9fa] border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <div class="md:w-1/2">
+                    <h2 class="section-title mb-6 text-center md:text-left">Global Innovation</h2>
+                    <p class="text-lg text-[#5f6368] leading-relaxed mb-6">
+                        We invest heavily in proprietary technologies that ensure ecosystem integrity. From <strong>Behavioral AI</strong> to <strong>Edge Compute Rewards</strong>, we stay ahead of the digital curve.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white p-6 rounded-xl border border-gray-200">
+                            <div class="text-[#1a73e8] font-bold text-2xl">99.9%</div>
+                            <div class="text-xs text-gray-400 uppercase font-bold tracking-widest mt-1">Uptime</div>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl border border-gray-200">
+                            <div class="text-[#1a73e8] font-bold text-2xl">0.2ms</div>
+                            <div class="text-xs text-gray-400 uppercase font-bold tracking-widest mt-1">Sync Latency</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1000" class="rounded-2xl shadow-lg border border-gray-100" alt="Innovation">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-32 bg-white">
+        <div class="max-w-3xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="section-title mb-4">Contact Sales</h2>
+                <p class="text-[#5f6368]">Let's discuss how Nova Tech can power your project.</p>
+            </div>
+            
+            <form action="#" class="flex flex-col gap-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <input type="text" placeholder="First Name" class="input-field">
+                    <input type="email" placeholder="Work Email" class="input-field">
+                </div>
+                <input type="text" placeholder="Company" class="input-field">
+                <textarea placeholder="Tell us about your needs" class="input-field h-32 resize-none"></textarea>
+                <button type="submit" class="btn-google py-4 text-base font-semibold shadow-lg">Submit Inquiry</button>
+            </form>
         </div>
     </section>
 
@@ -113,17 +160,28 @@
                 <div>
                     <h4 class="text-xs font-bold text-[#202124] uppercase tracking-widest mb-6">Support</h4>
                     <ul class="text-sm text-[#5f6368] space-y-4">
-                        <li><a href="#" class="hover:text-black transition">Contact</a></li>
+                        <li><a href="#contact" class="hover:text-black transition">Contact</a></li>
                         <li><a href="#" class="hover:text-black transition">Security Disclosure</a></li>
                     </ul>
                 </div>
             </div>
         </div>
-        <div class="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-gray-100 flex justify-between text-xs text-gray-400 font-medium">
-            <p>© 2026 Nova Tech Groups. Built with Precision.</p>
-            <p>Global Software Solutions</p>
+        <div class="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center text-xs text-gray-400 font-medium">
+            <p>© 2026 Nova Tech Groups. All Rights Reserved.</p>
+            <p class="mt-4 md:mt-0">Global Software Solutions | Engineered for Scale</p>
         </div>
     </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 
 </body>
 </html>
