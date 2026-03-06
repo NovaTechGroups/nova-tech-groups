@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Disclosure | VKNOVA TECHGROUPS</title>
+    <link rel="icon" type="image/png" href="favicon-square.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-[#fafafa] text-[#202124] font-['Inter']">
+
+    <nav class="p-6 bg-white border-b border-gray-100 flex justify-between items-center">
+        <a href="index.html" class="flex items-center gap-3">
+            <img src="favicon-square.png" alt="Logo" class="h-8 w-8">
+            <span class="font-bold text-lg">Nova <span class="text-red-600">Security Hub</span></span>
+        </a>
+    </nav>
+
+    <main class="max-w-4xl mx-auto px-6 py-16">
+        <div class="bg-white p-12 rounded-3xl shadow-sm border border-gray-100">
+            <div class="inline-block px-3 py-1 bg-red-50 text-red-600 text-xs font-bold rounded-full mb-6 uppercase tracking-widest">Official Policy</div>
+            <h1 class="text-4xl font-bold mb-6">Vulnerability Disclosure</h1>
+            <p class="text-gray-500 mb-10">At VKNOVA TECHGROUPS, security is our first principle. We welcome the contribution of external security researchers to help us maintain a hardened ecosystem.</p>
+
+            <div class="space-y-8 mb-12">
+                <div class="flex gap-4">
+                    <div class="font-bold text-red-600">01.</div>
+                    <div>
+                        <h3 class="font-bold">Guidelines</h3>
+                        <p class="text-sm text-gray-500">Do not attempt to access user data or disrupt services. Use test accounts only.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <div class="font-bold text-red-600">02.</div>
+                    <div>
+                        <h3 class="font-bold">Reporting</h3>
+                        <p class="text-sm text-gray-500">Provide a detailed proof-of-concept (PoC) to help our engineering team replicate the issue.</p>
+                    </div>
+                </div>
+            </div>
+
+            <form class="space-y-4 pt-8 border-t border-gray-100">
+                <input type="email" placeholder="Researcher Email" class="w-full p-4 bg-gray-50 border border-gray-200 rounded-xl outline-none focus:ring-2 focus:ring-red-500">
+                <textarea rows="5" placeholder="Describe the vulnerability in detail..." class="w-full p-4 bg-gray-50 border border-gray-200 rounded-xl outline-none focus:ring-2 focus:ring-red-500"></textarea>
+                <button class="w-full bg-[#202124] text-white font-bold py-4 rounded-xl hover:bg-red-600 transition">Submit Secure Report</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
