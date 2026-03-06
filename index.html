@@ -3,131 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TaskBar | Nova Tech Groups</title>
+    <title>Nova Tech Groups | TaskBar Ecosystem</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #050505; }
-        .glass { background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
-        .text-glow { text-shadow: 0 0 20px rgba(34, 197, 94, 0.5); }
+        .glass { background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(15px); border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+        .text-glow { text-shadow: 0 0 25px rgba(34, 197, 94, 0.6); }
         .game-card:hover .overlay { opacity: 1; transform: translateY(0); }
     </style>
 </head>
 <body class="text-white overflow-x-hidden">
 
-    <nav class="glass fixed top-0 w-full z-50 px-6 py-4 flex justify-between items-center">
-        <div class="flex items-center space-x-2">
-            <div class="w-8 h-8 bg-green-500 rounded-sm transform rotate-45"></div>
-            <span class="text-2xl font-black italic tracking-tighter uppercase">TASK<span class="text-green-500">BAR</span></span>
+    <nav class="glass fixed top-0 w-full z-50 px-8 py-5 flex justify-between items-center">
+        <div class="flex items-center space-x-3">
+            <div class="w-7 h-7 bg-green-500 rounded-full shadow-[0_0_15px_rgba(34,197,94,0.5)]"></div>
+            <span class="text-xl font-black italic tracking-tighter uppercase">NOVA <span class="text-green-500">TECH</span></span>
         </div>
-        <div class="hidden md:flex space-x-10 text-xs font-bold uppercase tracking-widest">
-            <a href="#" class="hover:text-green-500 transition">Games</a>
-            <a href="#" class="hover:text-green-500 transition">Rewards</a>
-            <a href="#" class="hover:text-green-500 transition">About Nova</a>
-            <a href="#" class="hover:text-green-500 transition">Support</a>
+        <div class="hidden md:flex space-x-12 text-[10px] font-bold uppercase tracking-[0.2em]">
+            <a href="#" class="hover:text-green-400 transition">Ecosystem</a>
+            <a href="#" class="hover:text-green-400 transition">TaskBar</a>
+            <a href="#featured" class="hover:text-green-400 transition">Games</a>
+            <a href="privacy.html" class="hover:text-green-400 transition">Legal</a>
         </div>
-        <button class="bg-white text-black px-5 py-2 text-xs font-black uppercase tracking-tighter hover:bg-green-500 transition-colors">
-            Get Started
+        <button class="bg-green-500 text-black px-6 py-2 text-[10px] font-black uppercase tracking-widest hover:bg-white transition-all transform active:scale-95">
+            Download App
         </button>
     </nav>
 
     <section class="relative h-screen flex items-center justify-center">
-        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#050505]/80 to-[#050505] z-10"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#050505]/60 to-[#050505] z-10"></div>
         
-        <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=2000" 
-             class="absolute inset-0 w-full h-full object-cover opacity-40 z-0" alt="Hero">
+        <img src="https://images.unsplash.com/photo-1614850523296-d8c1af93d400?auto=format&fit=crop&q=80&w=2000" 
+             class="absolute inset-0 w-full h-full object-cover opacity-30 z-0" alt="Nova Tech Background">
 
         <div class="relative z-20 text-center px-4">
-            <h1 class="text-7xl md:text-9xl font-black uppercase italic tracking-tighter leading-none mb-6">
-                PLAY. EARN. <br><span class="text-green-500 text-glow">DOMINATE.</span>
+            <div class="mb-4 inline-block bg-white/5 border border-white/10 px-4 py-1 rounded-full">
+                <span class="text-[10px] font-bold tracking-[0.3em] text-green-400 uppercase">Powered by Nova Tech Groups</span>
+            </div>
+            <h1 class="text-6xl md:text-[10rem] font-black uppercase italic tracking-tighter leading-[0.85] mb-8">
+                TASK<span class="text-green-500 text-glow">BAR</span>
             </h1>
-            <p class="text-gray-400 max-w-xl mx-auto text-lg mb-10 font-medium">
-                The next generation of mobile rewards by <span class="text-white">Nova Tech Groups</span>. Complete missions, dominate leaderboards, and win real rewards.
+            <p class="text-gray-400 max-w-2xl mx-auto text-base md:text-lg mb-12 font-medium tracking-wide">
+                Experience the next frontier of mobile rewards. <span class="text-white font-bold">Nova Tech Groups</span> introduces a cinematic ecosystem where your gaming precision translates into high-value digital assets.
             </p>
-            <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
-                <button class="w-64 bg-green-500 text-black py-4 font-black uppercase italic tracking-widest hover:bg-white transition-all transform hover:scale-105">
-                    Download for Android
+            <div class="flex flex-col md:flex-row gap-6 justify-center items-center">
+                <button class="w-72 bg-white text-black py-5 font-black uppercase italic tracking-[0.15em] hover:bg-green-500 transition-all shadow-xl">
+                    Get it on Google Play
                 </button>
-                <button class="w-64 border border-white/20 py-4 font-black uppercase italic tracking-widest hover:bg-white/10 transition-all">
-                    View Offerwalls
+                <button class="w-72 border border-white/10 py-5 font-black uppercase italic tracking-[0.15em] hover:bg-white/5 transition-all backdrop-blur-sm">
+                    View Network Stats
                 </button>
             </div>
         </div>
     </section>
 
-    <section class="py-20 px-8 max-w-7xl mx-auto">
-        <div class="flex justify-between items-end mb-12">
+    <section id="featured" class="py-32 px-8 max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
             <div>
-                <h2 class="text-4xl font-black uppercase italic tracking-tighter">Featured <span class="text-green-500">Experiences</span></h2>
-                <div class="h-1 w-20 bg-green-500 mt-2"></div>
+                <span class="text-green-500 font-black uppercase tracking-widest text-xs">The Collection</span>
+                <h2 class="text-5xl font-black uppercase italic tracking-tighter mt-2">Latest <span class="text-green-500">Deployments</span></h2>
             </div>
-            <a href="#" class="text-sm font-bold uppercase tracking-widest text-gray-500 hover:text-white transition">Explore All &rarr;</a>
+            <p class="text-gray-500 text-sm max-w-xs md:text-right font-medium">Curated high-performance titles optimized for the TaskBar reward engine.</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="group relative overflow-hidden bg-zinc-900 aspect-[4/5] game-card cursor-pointer">
-                <img src="https://images.unsplash.com/photo-1614027126276-ebbd50b799a1?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100" alt="Game 1">
-                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent p-8 flex flex-col justify-end">
-                    <h3 class="text-2xl font-black uppercase italic italic">Nitro Dash</h3>
-                    <p class="text-green-500 font-bold text-xs tracking-widest uppercase mb-2">Racing • +500 Bolts</p>
-                    <div class="h-0 group-hover:h-12 overflow-hidden transition-all duration-300">
-                        <button class="bg-white text-black text-[10px] px-4 py-2 font-bold uppercase">Play Now</button>
-                    </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="group relative overflow-hidden bg-zinc-900 aspect-[3/4] cursor-pointer border border-white/5">
+                <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-60 group-hover:opacity-100" alt="Nitro Dash">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent p-10 flex flex-col justify-end">
+                    <h3 class="text-3xl font-black uppercase italic">Nitro Dash</h3>
+                    <p class="text-green-500 font-bold text-xs tracking-[0.2em] uppercase mt-2">High Speed • Rewards Enabled</p>
                 </div>
             </div>
 
-            <div class="group relative overflow-hidden bg-zinc-900 aspect-[4/5] game-card cursor-pointer">
-                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100" alt="Game 2">
-                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent p-8 flex flex-col justify-end">
-                    <h3 class="text-2xl font-black uppercase italic">Cyber Strike</h3>
-                    <p class="text-green-500 font-bold text-xs tracking-widest uppercase mb-2">Shooter • +1200 Bolts</p>
-                    <div class="h-0 group-hover:h-12 overflow-hidden transition-all duration-300">
-                        <button class="bg-white text-black text-[10px] px-4 py-2 font-bold uppercase">Play Now</button>
-                    </div>
+            <div class="group relative overflow-hidden bg-zinc-900 aspect-[3/4] cursor-pointer border border-green-500/30">
+                <img src="https://images.unsplash.com/photo-1542751110-97427bbecf20?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-60 group-hover:opacity-100" alt="Cyber Strike">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent p-10 flex flex-col justify-end">
+                    <h3 class="text-3xl font-black uppercase italic">Cyber Strike</h3>
+                    <p class="text-green-500 font-bold text-xs tracking-[0.2em] uppercase mt-2">Combat • Multiplier Active</p>
                 </div>
             </div>
 
-            <div class="group relative overflow-hidden bg-zinc-900 aspect-[4/5] game-card cursor-pointer border border-green-500/20">
-                <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100" alt="Game 3">
-                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent p-8 flex flex-col justify-end">
-                    <h3 class="text-2xl font-black uppercase italic">Bolts Mania</h3>
-                    <p class="text-green-500 font-bold text-xs tracking-widest uppercase mb-2">Casual • x2 Multiplier</p>
-                    <div class="h-0 group-hover:h-12 overflow-hidden transition-all duration-300">
-                        <button class="bg-white text-black text-[10px] px-4 py-2 font-bold uppercase">Play Now</button>
-                    </div>
+            <div class="group relative overflow-hidden bg-zinc-900 aspect-[3/4] cursor-pointer border border-white/5">
+                <img src="https://images.unsplash.com/photo-1611996575749-79a3a250f948?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-60 group-hover:opacity-100" alt="Bolts Mania">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent p-10 flex flex-col justify-end">
+                    <h3 class="text-3xl font-black uppercase italic text-white">Nova Rush</h3>
+                    <p class="text-green-500 font-bold text-xs tracking-[0.2em] uppercase mt-2">Arcade • Daily Bonus</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="border-t border-white/5 py-16 px-8 bg-black">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start">
-            <div class="mb-10 md:mb-0">
-                <div class="text-3xl font-black italic tracking-tighter uppercase mb-4">TASK<span class="text-green-500">BAR</span></div>
-                <p class="text-gray-500 text-sm max-w-xs">A flagship digital gaming and reward platform by Nova Tech Groups. Built for the future of mobile entertainment.</p>
+    <footer class="border-t border-white/5 py-24 px-8 bg-black">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+            <div class="col-span-1 md:col-span-2">
+                <div class="text-2xl font-black italic tracking-tighter uppercase mb-6">NOVA <span class="text-green-500">TECH</span> GROUPS</div>
+                <p class="text-gray-500 text-sm max-w-sm leading-relaxed font-medium">
+                    Leading the mobile entertainment industry with secure reward systems and cinematic gaming experiences. TaskBar is a trademark of Nova Tech Groups.
+                </p>
             </div>
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-16">
-                <div>
-                    <h4 class="text-xs font-black uppercase tracking-widest text-white mb-6">Company</h4>
-                    <ul class="text-gray-500 text-xs space-y-4 font-bold uppercase">
-                        <li><a href="#" class="hover:text-green-500 transition">About Us</a></li>
-                        <li><a href="#" class="hover:text-green-500 transition">Careers</a></li>
-                        <li><a href="#" class="hover:text-green-500 transition">Contact</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-xs font-black uppercase tracking-widest text-white mb-6">Legal</h4>
-                    <ul class="text-gray-500 text-xs space-y-4 font-bold uppercase">
-                        <li><a href="#" class="hover:text-green-500 transition">Privacy Policy</a></li>
-                        <li><a href="#" class="hover:text-green-500 transition">Terms of Use</a></li>
-                        <li><a href="#" class="hover:text-green-500 transition">Safety</a></li>
-                    </ul>
-                </div>
+            <div>
+                <h4 class="text-[10px] font-black uppercase tracking-[0.3em] text-white mb-8">Platform</h4>
+                <ul class="text-gray-500 text-[10px] space-y-4 font-bold uppercase tracking-widest">
+                    <li><a href="#" class="hover:text-green-500 transition">TaskBar App</a></li>
+                    <li><a href="#" class="hover:text-green-500 transition">Offerwalls</a></li>
+                    <li><a href="#" class="hover:text-green-500 transition">Developer API</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-[10px] font-black uppercase tracking-[0.3em] text-white mb-8">Governance</h4>
+                <ul class="text-gray-500 text-[10px] space-y-4 font-bold uppercase tracking-widest">
+                    <li><a href="privacy.html" class="hover:text-green-500 transition font-black text-white border-b border-green-500/50">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:text-green-500 transition">User Terms</a></li>
+                    <li><a href="#" class="hover:text-green-500 transition">Data Safety</a></li>
+                </ul>
             </div>
         </div>
-        <div class="max-w-7xl mx-auto mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between text-[10px] text-gray-600 font-bold uppercase tracking-widest">
-            <p>&copy; 2026 Nova Tech Groups. All Rights Reserved.</p>
-            <p>Developed with Precision.</p>
+        <div class="max-w-7xl mx-auto mt-24 pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between text-[9px] text-gray-600 font-bold uppercase tracking-[0.4em]">
+            <p>&copy; 2026 Nova Tech Groups. Engineered for Excellence.</p>
+            <div class="flex space-x-8 mt-4 md:mt-0">
+                <span>London</span>
+                <span>New York</span>
+                <span>Tokyo</span>
+            </div>
         </div>
     </footer>
 
