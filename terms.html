@@ -12,29 +12,28 @@
     <style>
         body { font-family: 'Inter', sans-serif; color: #3c4043; line-height: 1.7; }
         
-        /* Making headers bold and slightly larger */
         .legal-header { 
             color: #202124; 
             font-size: 1.4rem; 
             font-weight: 700; 
             display: block;
-            margin-top: 3.5rem; /* Large space before the topic */
-            margin-bottom: 1.25rem; /* Space after the topic */
+            margin-top: 3.5rem; 
+            margin-bottom: 1.25rem; 
         }
 
         .legal-box { border-left: 4px solid #1a73e8; background: #f8f9fa; padding: 20px; margin: 20px 0; }
+        .grievance-box { border: 1px solid #e5e7eb; background: #ffffff; padding: 24px; border-radius: 16px; margin: 20px 0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05); }
         strong { color: #202124; }
         
-        /* Spacing for lists */
         .legal-list li { margin-bottom: 0.75rem; }
     </style>
 </head>
 <body class="bg-white antialiased">
 
-   <nav class="p-6 border-b border-gray-100 flex justify-between items-center">
+   <nav class="p-6 border-b border-gray-100 flex justify-between items-center bg-white sticky top-0 z-50">
         <a href="index.html" class="flex items-center gap-3">
             <img src="Logo Backdgroung Removed.png" alt="Logo" class="h-10 w-auto">
-            <span class="font-bold text-lg">Nova <span class="text-[#1a73e8]">Tech Groups</span></span>
+            <span class="font-bold text-lg text-gray-900">Nova <span class="text-[#1a73e8]">Tech Groups</span></span>
         </a>
         <a href="index.html" class="text-sm font-medium text-gray-500 hover:text-[#1a73e8]">← Back to Home</a>
     </nav>
@@ -61,12 +60,12 @@
             </div>
             <ul class="list-disc ml-6 legal-list">
                 <li><strong>No Guarantees:</strong> TaskBar does not guarantee that every task or offer completed will result in a reward, as credits depend on third-party verification.</li>
-                <li><strong>Expiration:</strong> We reserve the right to expire Bolts in accounts that have been inactive for more than 90 days.</li>
+                <li><strong>Expiration:</strong> We reserve the right to expire Bolts in accounts that have been inactive for more than <strong>90 days</strong>.</li>
             </ul>
 
             <span class="legal-header">3. Prohibited Conduct (Anti-Fraud Policy)</span>
             <p class="mb-4">To maintain a fair ecosystem, the following actions will result in an <strong>immediate and permanent ban</strong> without notice:</p>
-            <ul class="list-disc ml-6 legal-list">
+            <ul class="list-disc ml-6 legal-list font-medium text-red-600">
                 <li>Use of VPNs, Proxies, or Tor to bypass geo-restrictions.</li>
                 <li>Use of Emulators or Parallel Space/App Cloners.</li>
                 <li>Using automated bots or scripts to complete tasks.</li>
@@ -86,8 +85,35 @@
             <span class="legal-header">6. Termination</span>
             <p>We reserve the right to terminate or suspend access to our service immediately, without prior notice or liability, for any reason, including breach of these Terms.</p>
 
+            <span class="legal-header">7. Grievance Redressal Mechanism</span>
+            <p class="mb-4 text-sm text-gray-600 italic">In accordance with the Information Technology Act 2000 and the Digital Personal Data Protection Act 2023, the contact details of the Grievance Officer for VKNOVA TECHGROUPS (OPC) PRIVATE LIMITED are provided below:</p>
+            
+            <div class="grievance-box">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <p class="text-xs uppercase text-gray-400 font-bold mb-1">Name</p>
+                        <p class="font-semibold text-gray-800">S Vignesh Kumar</p>
+                    </div>
+                    <div>
+                        <p class="text-xs uppercase text-gray-400 font-bold mb-1">Designation</p>
+                        <p class="font-semibold text-gray-800">Grievance Redressal Officer</p>
+                    </div>
+                    <div>
+                        <p class="text-xs uppercase text-gray-400 font-bold mb-1">Email</p>
+                        <p class="font-semibold text-blue-600">info.taskbar@gmail.com</p>
+                    </div>
+                    <div>
+                        <p class="text-xs uppercase text-gray-400 font-bold mb-1">Address</p>
+                        <p class="text-sm text-gray-700">no:3/1, Indira Nagar, Elango Street, THANJAVUR - 613007, Tamil Nadu, India.</p>
+                    </div>
+                </div>
+                <div class="mt-6 pt-4 border-t border-gray-100 text-xs text-gray-500 italic">
+                    Note: We will acknowledge your complaint within 24 hours and aim to resolve it within 15 days as per Indian law.
+                </div>
+            </div>
+
             <div class="mt-20 pt-10 border-t border-gray-100">
-                <span class="legal-header" style="margin-top: 0;">7. Contact Information</span>
+                <span class="legal-header" style="margin-top: 0;">8. Contact Information</span>
                 <p class="text-[#5f6368] mb-6">For any legal inquiries or disputes regarding these terms, please contact us at:</p>
                 <div class="p-8 bg-gray-50 rounded-2xl border border-gray-100 text-sm space-y-2">
                     <p><strong>Email:</strong> info.taskbar@gmail.com</p>
