@@ -63,42 +63,43 @@
     </main>
 
     <script>
-        const form = document.getElementById('contact-form');
-        const btn = document.getElementById('submit-btn');
-        const successMsg = document.getElementById('success-msg');
+    const form = document.getElementById('contact-form');
+    const btn = document.getElementById('submit-btn');
+    const successMsg = document.getElementById('success-msg');
 
-        form.addEventListener("submit", e => {
-            e.preventDefault();
-            btn.innerHTML = "Sending...";
-            btn.disabled = true;
+    form.addEventListener("submit", e => {
+        e.preventDefault();
+        btn.innerHTML = "Sending...";
+        btn.disabled = true;
 
-            // Using your specific SheetDB API
-            fetch('https://sheetdb.io/api/v1/kxxerkb4e21av', {
-                method : 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    data: [
-                        {
-                            'Name': form.Name.value,
-                            'Email': form.Email.value,
-                            'Category': form.Category.value,
-                            'Message': form.Message.value,
-                            'Date': new Date().toLocaleString()
-                        }
-                    ]
-                })
-            }).then(response => response.json())
-            .then((data) => {
-                form.classList.add('hidden');
-                successMsg.classList.remove('hidden');
-            }).catch(err => {
-                alert('Connection error. Please try again.');
-                btn.innerHTML = "Send Message";
-                btn.disabled = false;
-            });
+        // Using your specific SheetDB API
+        fetch('https://sheetdb.io/api/v1/kxxerkb4e21av', {
+            method : 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                data: [
+                    {
+                        'Name': form.Name.value,
+                        'Email': form.Email.value,
+                        // This captures the dropdown selection perfectly
+                        'Subject': form.Category.value, 
+                        'Message': form.Message.value,
+                        'Timestamp': new Date().toLocaleString()
+                    }
+                ]
+            })
+        }).then(response => response.json())
+        .then((data) => {
+            form.classList.add('hidden');
+            successMsg.classList.remove('hidden');
+        }).catch(err => {
+            alert('Connection error. Please try again.');
+            btn.innerHTML = "Send Message";
+            btn.disabled = false;
         });
-    </script>
+    });
+</script>
 </body>
 </html>
