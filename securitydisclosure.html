@@ -40,11 +40,40 @@
                 </div>
             </div>
 
-            <form class="space-y-4 pt-8 border-t border-gray-100">
-                <input type="email" placeholder="Researcher Email" class="w-full p-4 bg-gray-50 border border-gray-200 rounded-xl outline-none focus:ring-2 focus:ring-red-500">
-                <textarea rows="5" placeholder="Describe the vulnerability in detail..." class="w-full p-4 bg-gray-50 border border-gray-200 rounded-xl outline-none focus:ring-2 focus:ring-red-500"></textarea>
-                <button class="w-full bg-[#202124] text-white font-bold py-4 rounded-xl hover:bg-red-600 transition">Submit Secure Report</button>
-            </form>
+            <form id="security-form" class="space-y-4 pt-8 border-t border-gray-100">
+    <input type="email" name="data[Email]" placeholder="Researcher Email" class="w-full p-4 bg-gray-50 border border-gray-200 rounded-xl outline-none focus:ring-2 focus:ring-red-500" required>
+    <textarea name="data[Report]" rows="5" placeholder="Describe the vulnerability in detail..." class="w-full p-4 bg-gray-50 border border-gray-200 rounded-xl outline-none focus:ring-2 focus:ring-red-500" required></textarea>
+    <button type="submit" id="submit-btn" class="w-full bg-[#202124] text-white font-bold py-4 rounded-xl hover:bg-red-600 transition">Submit Secure Report</button>
+</form>
+
+<div id="success-msg" class="hidden mt-6 p-4 bg-green-50 text-green-700 rounded-xl text-center border border-green-200">
+    ✔ Report submitted securely. Our security team will review this shortly.
+</div>
+
+<script>
+    const form = document.getElementById('security-form');
+    const btn = document.getElementById('submit-btn');
+    const successMsg = document.getElementById('success-msg');
+
+    form.addEventListener("submit", e => {
+        e.preventDefault();
+        btn.innerHTML = "Encrypting & Sending...";
+        btn.disabled = true;
+
+        fetch('https://sheetdb.io/api/v1/kxxerkb4e21av', {
+            method : 'POST',
+            body: new FormData(form),
+        }).then(response => response.json())
+        .then((data) => {
+            form.classList.add('hidden');
+            successMsg.classList.remove('hidden');
+        }).catch(err => {
+            alert('Submission failed. Please email info.taskbar@gmail.com');
+            btn.innerHTML = "Submit Secure Report";
+            btn.disabled = false;
+        });
+    });
+</script>
         </div>
     </main>
 </body>
