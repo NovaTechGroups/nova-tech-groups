@@ -7,9 +7,11 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; color: #3c4043; line-height: 1.6; }
+        body { font-family: 'Inter', sans-serif; color: #3c4043; line-height: 1.8; }
         .accent-text { color: #1a73e8; font-weight: 600; }
         .glass-card { background: rgba(255, 255, 255, 0.8); border: 1px solid #e8eaed; backdrop-filter: blur(10px); }
+        .section-heading { font-size: 1.5rem; font-weight: 500; color: #202124; margin-bottom: 1rem; margin-top: 2.5rem; }
+        p { margin-bottom: 1.25rem; }
     </style>
 </head>
 <body class="bg-white antialiased">
@@ -28,39 +30,85 @@
             </h1>
         </header>
 
-        <div class="space-y-10 text-lg text-[#5f6368]">
+        <div class="space-y-6 text-lg text-[#5f6368]">
+            
             <section>
-                <h2 class="text-2xl font-medium text-[#202124] mb-4">The Origin</h2>
+                <h2 class="section-heading">The Origin</h2>
                 <p>
-                    Nova Tech Groups wasn't born in a corporate boardroom. It started at a single desk, driven by a vision to build mobile infrastructure that felt professional, looked cinematic, and remained unbreakably secure.
+                    Nova Tech Groups wasn't born in a corporate boardroom. It started at a single desk in Tamil Nadu, driven by a vision to build mobile infrastructure that felt professional, looked cinematic, and remained unbreakably secure. It was born out of the belief that geography and team size are no longer barriers to global impact.
                 </p>
             </section>
 
-            <section class="p-8 glass-card rounded-2xl border-l-4 border-l-[#1a73e8]">
-                <h2 class="text-2xl font-medium text-[#202124] mb-4">The Partnership: Human + AI</h2>
+            <section class="p-8 glass-card rounded-2xl border-l-4 border-l-[#1a73e8] my-10">
+                <h2 class="section-heading !mt-0">The Partnership: Human + AI</h2>
                 <p>
                     In a world of massive development teams, Nova Tech Groups took a different path. This entire ecosystem was engineered through a unique modern partnership: <span class="accent-text">A solo developer working in direct collaboration with Google Gemini.</span>
                 </p>
-                <p class="mt-4">
-                    By leveraging the power of advanced AI, we bridged the gap between a "one-person project" and "enterprise-grade software." Gemini acted as the architect and creative partner, allowing our founder to focus on what matters most: <span class="accent-text">Security and User Experience.</span>
+                <p>
+                    By leveraging the power of advanced AI, we bridged the gap between a "one-person project" and "enterprise-grade software." Gemini acted as the Lead Architect and Debugger, allowing our founder to focus on high-level system design: <span class="accent-text">Security, Scalability, and User Experience.</span>
+                </p>
+            </section>
+
+            
+
+            <section>
+                <h2 class="section-heading">The Story Behind TaskBar</h2>
+                <p>
+                    TaskBar was created with a simple idea — making small moments of free time more useful. The journey started when <strong>Vignesh Kumar</strong>, a student and aspiring developer, became curious about how mobile apps work. Instead of just using apps, he wanted to understand how they were built. 
+                </p>
+                <p>
+                    While exploring technologies like <strong>Firebase</strong>, he began building small features step by step — login systems, task systems, and fraud protection. The goal of TaskBar is simple: give users a place where they can complete tasks and earn digital rewards in a transparent and fair way.
                 </p>
             </section>
 
             <section>
-                <h2 class="text-2xl font-medium text-[#202124] mb-4">The Breakthrough</h2>
+                <h2 class="section-heading text-[#1a73e8]">The Resilience of Logic</h2>
                 <p>
-                    Our first major milestone was <span class="font-semibold text-black">TaskBar</span>. We saw that most reward platforms lacked real-time synchronization. By utilizing <strong>Firebase</strong> and building our proprietary <strong>BaseSecurity Client</strong>, we proved that a lean, AI-augmented workflow could produce a product that rivals the speed and safety of global corporations.
+                    The journey wasn't without obstacles. When traditional hosting platforms presented barriers, we didn't pause. We engineered custom bridges, pivoting from standard server architectures to <strong>API-driven cloud integrations</strong> using Google Sheets as a living database. This agility is the core of Nova Tech: <span class="italic">we don't just find solutions; we build them.</span>
+                </p>
+            </section>
+
+            
+
+            <section>
+                <h2 class="section-heading">The Breakthrough: TaskBar & BaseSecurity</h2>
+                <p>
+                    Our first major milestone was the launch of the TaskBar ecosystem. We identified a critical flaw in the market: most reward platforms lacked real-time synchronization. By utilizing <strong>Firebase Real-time Architecture</strong> and building our proprietary <strong>BaseSecurity Client</strong>, we proved that a lean, AI-augmented workflow could produce a product that rivals the speed and safety of global corporations.
                 </p>
             </section>
 
             <section>
-                <h2 class="text-2xl font-medium text-[#202124] mb-4">Empowering the Next Generation</h2>
+                <h2 class="section-heading">Empowering the Next Generation</h2>
                 <p>
-                    To us, our slogan isn't just marketing—it’s a reality. We are the "next generation" of developers—those who use artificial intelligence to multiply their impact. We don't need a thousand employees to build the future; we just need a clear vision and the right tools.
+                    To us, our slogan isn't just marketing—it’s a reality. We represent the <strong>"Force Multipliers"</strong>—the developers who use artificial intelligence to multiply their impact by 100x. We don't need a thousand employees to build the future; we just need a clear vision and the right neural partner.
+                </p>
+            </section>
+
+            <section>
+                <h2 class="section-heading">The Road to World-Rank</h2>
+                <p>
+                    Nova Tech Groups is currently in its "Alpha Phase," but our roadmap is clear. We are scaling toward <strong>World-Rank status</strong>, refining every millisecond of code and every pixel of design until our systems power digital ecosystems across the globe.
                 </p>
             </section>
         </div>
 
+        <div class="mt-20 pt-10 border-t border-gray-100 flex items-center gap-6">
+            <div class="w-16 h-16 bg-gradient-to-br from-[#1a73e8] to-[#1557b0] rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                VK
+            </div>
+            <div>
+                <p class="text-[#202124] font-semibold mb-0">Vignesh Kumar</p>
+                <p class="text-sm text-gray-400 font-medium italic">Founder, Nova Tech Groups</p>
+                <p class="text-xs text-[#1a73e8] font-bold uppercase tracking-widest mt-1">"Engineered through modern collaboration."</p>
+            </div>
+        </div>
+
+        <div class="mt-12 p-6 bg-gray-50 rounded-xl border border-gray-100 text-center">
+            <p class="text-sm text-[#5f6368] italic mb-0">
+                "In the past, you needed a building full of people to change the world. Today, you just need the grit to stay up until the code works and the intelligence to partner with the future."
+            </p>
+        </div>
+        
         <div class="mt-20 pt-10 border-t border-gray-100 flex items-center gap-6">
             <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center text-white font-bold text-xl">
                 NT
@@ -73,8 +121,8 @@
 
     </main>
 
-    <footer class="py-12 bg-gray-50 text-center mt-20">
-        <p class="text-xs text-gray-400 tracking-widest uppercase">© 2026 Nova Tech Groups | Developed with Google Gemini</p>
+    <footer class="py-12 bg-gray-50 text-center mt-20 border-t border-gray-100">
+        <p class="text-xs text-gray-400 tracking-widest uppercase">© 2026 VKNOVA TECHGROUPS (OPC) PRIVATE LIMITED | Developed with Google Gemini</p>
     </footer>
 
 </body>
