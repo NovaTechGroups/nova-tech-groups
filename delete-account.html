@@ -10,7 +10,7 @@
 
     <div id="main-box" class="max-w-sm w-full bg-white p-8 rounded-xl shadow-sm border border-gray-200">
         <h2 class="text-2xl font-bold text-gray-800 mb-2 text-center">Delete Account</h2>
-        <p class="text-xs text-gray-500 text-center mb-6">Warning: This action cannot be undone.</p>
+        <p class="text-[10px] text-gray-400 text-center mb-6 uppercase tracking-widest">VKNOVA TECHGROUPS Security Portal</p>
         
         <form id="delete-form" class="space-y-4">
             <div>
@@ -19,15 +19,16 @@
                        class="w-full border border-gray-300 rounded-md p-3 outline-none focus:ring-2 focus:ring-red-500" required>
             </div>
 
+            <input type="hidden" name="data[Date]" id="timestamp-hidden">
+            <input type="hidden" name="data[Subject]" value="Delete Account">
+            <input type="hidden" name="data[Status]" value="Pending">
+
             <div class="flex items-start gap-2 bg-red-50 p-3 rounded-md">
                 <input type="checkbox" id="confirm-check" class="mt-1" required>
                 <label for="confirm-check" class="text-xs text-red-800">
-                    I understand that all my <strong>Bolts</strong> and progress will be permanently lost after 30 days.
+                    I confirm that I want to delete my data. This cannot be undone.
                 </label>
             </div>
-
-            <input type="hidden" name="data[Subject]" value="Delete Account">
-            <input type="hidden" name="data[Status]" value="Pending">
 
             <button type="submit" id="sub-btn" class="w-full bg-red-600 text-white py-3 rounded-md font-semibold hover:bg-red-700 transition">
                 Request Permanent Deletion
@@ -35,8 +36,9 @@
         </form>
 
         <div id="done-msg" class="hidden text-center py-4">
-            <p class="text-green-600 font-bold text-lg">✔ Request Received</p>
-            <p class="text-gray-500 text-sm mt-2">Check your email for confirmation. Processing takes up to 30 days.</p>
+            <p class="text-green-600 font-bold text-lg">✔ Request Logged</p>
+            <p class="text-gray-500 text-xs mt-2">Request ID: <span id="display-time"></span></p>
+            <p class="text-gray-400 text-[10px] mt-4">We will process this within 30 days.</p>
         </div>
     </div>
 
@@ -48,12 +50,16 @@
         form.addEventListener("submit", e => {
             e.preventDefault();
 
-            // SECOND CONFIRMATION (Browser Popup)
-            const secondCheck = confirm("Are you absolutely sure? Your reward balance will be reset to zero.");
-            
-            if (secondCheck) {
-                btn.innerHTML = "Processing...";
+            if (confirm("Final Warning: Are you sure you want to delete your TaskBar account?")) {
+                btn.innerHTML = "Logging Request...";
                 btn.disabled = true;
+
+                // --- TIMESTAMP LOGIC ---
+                const now = new Date();
+                const timeString = now.toLocaleString(); // Format: 7/3/2026, 9:56:41 PM
+                document.getElementById('timestamp-hidden').value = timeString;
+                document.getElementById('display-time').innerText = timeString;
+                // -----------------------
 
                 fetch('https://sheetdb.io/api/v1/kxxerkb4e21av', {
                     method : 'POST',
@@ -62,7 +68,7 @@
                     form.classList.add('hidden');
                     msg.classList.remove('hidden');
                 }).catch(err => {
-                    alert('Error connecting. Please try again.');
+                    alert('Network error. Please try again.');
                     btn.innerHTML = "Request Permanent Deletion";
                     btn.disabled = false;
                 });
